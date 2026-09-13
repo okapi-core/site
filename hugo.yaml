@@ -1,5 +1,5 @@
 # Hugo configuration file
-title: My Site
+title: Okapi - debug prod with AI
 
 # import hextra as module
 module:
@@ -33,7 +33,7 @@ menu:
         type: search
     - name: GitHub
       weight: 5
-      url: "https://github.com/imfing/hextra-starter-template"
+      url: "https://github.com/okapi-core/okapi-engine"
       params:
         icon: github
     - name: Twitter
@@ -43,6 +43,9 @@ menu:
         icon: x-twitter
 
 params:
+  page:
+    width: wide
+
   navbar:
     displayTitle: true
     displayLogo: false
