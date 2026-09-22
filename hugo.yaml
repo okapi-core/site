@@ -18,14 +18,14 @@ markup:
 
 menu:
   main:
+    - name: Home
+      pageRef: /
+      weight: 1
     - name: Docs
       pageRef: /docs
-      weight: 1
-    - name: About
-      pageRef: /about
       weight: 2
-    - name: Contact ↗
-      url: "https://github.com/okapi-core/okapi-engine/discussions"
+    - name: Blog
+      pageRef: /blog
       weight: 3
     - name: Search
       weight: 4
@@ -36,11 +36,6 @@ menu:
       url: "https://github.com/okapi-core/okapi-engine"
       params:
         icon: github
-    - name: Twitter
-      weight: 6
-      url: "https://twitter.com/"
-      params:
-        icon: x-twitter
 
 params:
   page:
