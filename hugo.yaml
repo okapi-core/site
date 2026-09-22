@@ -25,7 +25,7 @@ menu:
       pageRef: /about
       weight: 2
     - name: Contact ↗
-      url: "https://github.com/imfing"
+      url: "https://github.com/okapi-core/okapi-engine/discussions"
       weight: 3
     - name: Search
       weight: 4
@@ -56,4 +56,4 @@ params:
 
   editURL:
     enable: true
-    base: "https://github.com/imfing/hextra-starter-template/edit/main/content"
+    base: "https://github.com/okapi-core/site/edit/main/content"

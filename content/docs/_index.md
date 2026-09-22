@@ -1,18 +1,29 @@
 ---
-title: Documentation
-next: first-page
+title: Okapi documentation
+type: docs
 ---
 
-This is a demo of the theme's documentation layout.
+Okapi is an OpenTelemetry-native observability platform for metrics, logs, and
+traces, with ClickHouse-backed storage and Oscar, an AI-assisted investigation
+service.
 
-## Hello, World!
+This documentation is written for the people who install and operate Okapi.
+Start with [Choose an installation path](getting-started/) if you are evaluating
+Okapi, or go directly to [Kubernetes installation](installation/kubernetes/) for
+a production-oriented deployment.
 
-```go {filename="main.go"}
-package main
+## Documentation map
 
-import "fmt"
+- [Getting started](getting-started/) — choose a deployment model and understand the prerequisites.
+- [Architecture](architecture/) — understand the services, data paths, and storage boundaries.
+- [Installation](installation/) — install locally with Docker or on Kubernetes.
+- [okapictl](okapictl/) — use the supported command-line installer and demo runner.
+- [Helm reference](helm/) — deploy and tune the individual charts.
+- [Telemetry](telemetry/) — configure OpenTelemetry clients and optional Kafka ingestion.
+- [Operations](operations/) — validate, scale, upgrade, back up, and troubleshoot a deployment.
 
-func main() {
-    fmt.Println("Hello, World!")
-}
-```
+{{< callout type="warning" >}}
+Okapi is under active development. Pin the Okapi and `okapictl` versions you
+operate together, and treat the chart `values.yaml` files as schemas and
+development defaults rather than production configuration.
+{{< /callout >}}
