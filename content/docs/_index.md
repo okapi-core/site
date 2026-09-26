@@ -1,6 +1,10 @@
 ---
 title: Okapi documentation
 type: docs
+cascade:
+  params:
+    sidebar:
+      open: true
 ---
 
 Okapi is an OpenTelemetry-native observability platform for metrics, logs, and
@@ -23,7 +27,5 @@ a production-oriented deployment.
 - [Operations](operations/) — validate, scale, upgrade, back up, and troubleshoot a deployment.
 
 {{< callout type="warning" >}}
-Okapi is under active development. Pin the Okapi and `okapictl` versions you
-operate together, and treat the chart `values.yaml` files as schemas and
-development defaults rather than production configuration.
+Okapi is under active development. Found an issue ? Please file [here](https://github.com/okapi-core/engine/issues)
 {{< /callout >}}
