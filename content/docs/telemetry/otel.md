@@ -9,11 +9,11 @@ Okapi supports OTLP over HTTP with protobuf request bodies. These are HTTP
 endpoints carrying OTLP protobuf; they are not OTLP/gRPC endpoints. Send each
 signal to the matching path:
 
-| Signal | Path |
-| --- | --- |
+| Signal  | Path          |
+| ------- | ------------- |
 | Metrics | `/v1/metrics` |
-| Logs | `/v1/logs` |
-| Traces | `/v1/traces` |
+| Logs    | `/v1/logs`    |
+| Traces  | `/v1/traces`  |
 
 The ingester accepts `application/x-protobuf` and
 `application/octet-stream`. Configure an OTLP/HTTP exporter with the base URL

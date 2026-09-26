@@ -4,34 +4,16 @@ type: docs
 weight: 1
 ---
 
+The preferred way to install and manage okapi is via the `okapictl` CLI. Although each Okapi sub-system is released as a separate Docker image, its recommended to go through the `okapictl` route to avoid going through configuration hassles and / or dealing with Docker stuff yourself.
+Here's some recipes to get started quickly.
+
 ## Choose a path
 
-| Goal | Recommended path | What it provides |
-| --- | --- | --- |
-| Evaluate the product quickly | `okapictl demo --local` | Okapi plus the OpenTelemetry Astronomy Shop demo |
-| Run Okapi on a laptop | `okapictl install --local` | Okapi and its local PostgreSQL and ClickHouse dependencies |
-| Run a shared environment | `okapictl install --k8s` | The four Okapi Helm releases in an existing Kubernetes cluster |
-| Operate production infrastructure | Direct Helm | Full control over external databases, secrets, ingress, and scaling |
+| Goal                       | Recommended path                     | What it provides                                               |
+| -------------------------- | ------------------------------------ | -------------------------------------------------------------- |
+| Evaluate Okapi locally     | [Getting started locally](local/)    | Okapi with local PostgreSQL and ClickHouse                     |
+| Deploy Okapi in production | [Production deployment](kubernetes/) | The four Okapi Helm releases in an existing Kubernetes cluster |
 
-The local workflows are for evaluation and development. A production
-installation should use managed or separately operated PostgreSQL and
-ClickHouse, durable storage, backups, TLS, and a secret manager.
-
-## What you need
-
-For local Docker workflows:
-
-- Docker with the Compose v2 plugin.
-- Internet access to pull the versioned Okapi images.
-- Git as well if you run the OpenTelemetry demo.
-
-For Kubernetes:
-
-- A working `kubectl` context and Helm 3.
-- PostgreSQL reachable from the Okapi namespace.
-- ClickHouse reachable over its HTTP interface, normally port `8123`.
-- Kubernetes Secrets for database credentials and the Oscar model provider.
-- An ingress or load balancer for `web` if users need access outside the cluster.
-
-Okapi's charts do not install or manage production PostgreSQL or ClickHouse.
-The repository contains single-node charts for local Kubernetes testing only.
+The local workflows are intended for evaluation and development. Production
+deployments should use separately operated PostgreSQL and ClickHouse, durable
+storage, backups, TLS, and a secret manager.

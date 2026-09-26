@@ -59,11 +59,6 @@ install. `demo --aws` is present in the argument parser but currently returns
 stop or destroy subcommands; use the generated Docker Compose project for
 local lifecycle management and Helm for Kubernetes lifecycle management.
 
-The source repositories currently show a release skew: the checked-in Helm
-chart sources are version `0.0.2`, while the checked-in controller bundle is
-`0.0.5` (and the Python package metadata is `0.0.4`). Treat those as source
-checkout details and use a coordinated published release when deploying.
-
 Local and Kubernetes state is recorded under
 `~/.local/state/okapictl/`. Treat this as controller bookkeeping, not as a
 backup of Okapi data.
