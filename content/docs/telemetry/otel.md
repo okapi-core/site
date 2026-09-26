@@ -1,7 +1,11 @@
 ---
-title: Configure OpenTelemetry
+title: Direct ingestion
 type: docs
 ---
+
+Direct ingestion sends data to `okapi-ingester` over HTTP. In the default WAL
+mode, the ingester writes the received data to its write-ahead log and then
+processes it into ClickHouse. This path does not use Kafka.
 
 ## Protocol and paths
 

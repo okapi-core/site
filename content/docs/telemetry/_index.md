@@ -1,13 +1,14 @@
 ---
-title: Telemetry
+title: Sending data to Okapi
 type: docs
 weight: 4
 ---
 
-Okapi ingests metrics, logs, and traces through `okapi-ingester` and stores
-them in ClickHouse. The recommended edge is an OpenTelemetry Collector, which
-lets you batch, retry, filter, route, and protect telemetry before it reaches
-Okapi.
+Okapi receives metrics, logs, and traces through `okapi-ingester` and stores
+them in ClickHouse. Data can be sent directly to the ingester, or it can be
+routed through Kafka when buffered, independently consumable ingestion is
+required.
 
-- [Configure OpenTelemetry](otel/)
-- [Optional Kafka ingestion](kafka/)
+- [Direct ingestion](otel/)
+- [PromQL compatibility](promql/)
+- [Kafka ingestion](kafka/)
