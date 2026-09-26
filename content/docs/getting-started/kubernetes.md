@@ -5,6 +5,16 @@ type: docs
 
 This pathway is more involved, since a prod deployment requires taking care of secrets, access control, network ACLs.
 
+It is recommended that [`okapictl` be installed from PyPI](https://pypi.org/project/okapi-ctl/)
+before starting the deployment:
+
+```sh
+python -m pip install okapi-ctl
+```
+
+For command options and controller versioning guidance, see the
+[`okapictl` reference](../okapictl/).
+
 Helm charts are published with every Okapi release as OCI artifacts under
 `oci://ghcr.io/okapi-core/charts`. The Kubernetes installation deploys only
 Okapi: `ops`, `ingester`, `oscar`, and `web`. PostgreSQL and ClickHouse are

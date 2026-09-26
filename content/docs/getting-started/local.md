@@ -5,6 +5,16 @@ type: docs
 
 These recipes only deploy Okapi locally on a single node. Useful for trying out features without much setup. Both the pathways here use `okapictl` to remove most of setup friction, the only pre-requisite is an OpenAI API key that is required to power Oscar. In case, you're simply interested in checking out the UI, a dummy key can be provided. The only drawback is Oscar won't work but everything else such as logs browser, trace viewer, dashboards will work just as well.
 
+It is recommended that [`okapictl` be installed from PyPI](https://pypi.org/project/okapi-ctl/)
+before starting these workflows:
+
+```sh
+python -m pip install okapi-ctl
+```
+
+For command options and controller versioning guidance, see the
+[`okapictl` reference](../okapictl/).
+
 ## Getting started with just Okapi
 
 To locally spin an Okapi cluster, use the following:

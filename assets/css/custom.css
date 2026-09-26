@@ -1,0 +1,14 @@
+.home-path-card {
+  transition: border-color 150ms ease, transform 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.home-path-card:hover {
+  box-shadow: 0 12px 28px rgb(15 23 42 / 8%);
+  transform: translateY(-2px);
+}
+
+.home-path-card strong {
+  color: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
+  font-weight: 600;
+}

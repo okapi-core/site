@@ -38,6 +38,10 @@ menu:
         icon: github
 
 params:
+  highlight:
+    copy:
+      display: always
+
   page:
     width: wide
 

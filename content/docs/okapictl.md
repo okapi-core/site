@@ -9,6 +9,8 @@ Kubernetes installation, and the local OpenTelemetry demo. Use the controller
 release and Okapi bundle published for the same release; do not mix arbitrary
 CLI, image, and chart versions.
 
+The package is published as [`okapi-ctl` on PyPI](https://pypi.org/project/okapi-ctl/):
+
 ```sh
 python -m pip install okapi-ctl
 okapictl --help
