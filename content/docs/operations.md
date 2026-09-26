@@ -34,15 +34,27 @@ review before changing a shared namespace.
 
 ## Scaling and storage
 
-`web` and `ingester` are the primary stateless scaling targets. Enable HPA and
-PDB only after setting realistic resource requests. Ensure ingester WAL paths
-are durable if your chosen configuration depends on them; `/tmp` is not a
-durable production volume. ClickHouse capacity, partitioning, retention,
-replication, and backups are part of the database operating model, not the
-Okapi application charts.
+`web` and `ingester` are stateless application components and can be scaled
+horizontally. With the standard Helm release names, the deployments can be
+scaled manually with:
+
+```sh
+kubectl -n okapi scale deployment/web deployment/ingester --replicas=3
+kubectl -n okapi rollout status deployment/web
+kubectl -n okapi rollout status deployment/ingester
+```
+
+They can be scaled back down when appropriate:
+
+```sh
+kubectl -n okapi scale deployment/web deployment/ingester --replicas=1
+```
+
+Ensure ingester WAL paths are
+durable if the selected configuration depends on them; `/tmp` is not a
+durable production volume.
 
 ## Backups and recovery
 
-Back up PostgreSQL for web and Oscar state and ClickHouse for telemetry. Test
-restores into an isolated environment. A Helm release or `okapictl` state file
-does not contain your telemetry or application data.
+It is recommended to backup PostgreSQL for web and Oscar state and ClickHouse for telemetry. Test
+restores into an isolated environment.
